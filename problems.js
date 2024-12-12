@@ -89,7 +89,7 @@ function maxSubarraySum(arr,num){
 } 
 // console.log(maxSubarraySum([2,6,6,4,5,8,6,],3))
 
-function pyramid(){
+// function pyramid(){
 
     for (let line = "#"; line.length < 8; line+= "#"){
         console.log(line)
@@ -102,8 +102,8 @@ function pyramid(){
     // }
     // console.log(num)
     // }
-}
-pyramid(6)
+// }
+// pyramid(6)
 
 function chess(num){
     board = ""
@@ -141,4 +141,56 @@ function chess(num){
 
 // console.log(board);
 
-console.log(chess(8))
+// console.log(chess(8))
+
+// recursive is even
+function isEven(number){
+if (number  === 0){
+    return true
+}
+else if (number === 1 ){
+    return false
+}
+else if (number < 0) {return isEven(-number)}
+return isEven(number - 2)
+}
+
+// console.log(isEven(50))
+// console.log(isEven(-1))
+
+
+// minimum number
+function min(num1,num2){
+    if (num1 > num2){
+        return num2
+    }
+    else{return num1}
+
+}
+
+// console.log(min(5,4))
+// console.log(min(4,5))
+// console.log(min(36,10))
+
+
+
+// bean counting. CountBs calls countChar to count number of characters with a given target.
+
+function countBs(string){
+return countChar(string,"B")
+
+}
+
+
+function countChar(string,target){
+    count = 0
+    for (var i = 0; i < string.length; i++){
+        if (string[i] === target){
+            count +=1
+        }
+    }
+    
+    return count
+}
+console.log(countChar("kakkerlak","k"))
+console.log(countBs("BOB","B"))
