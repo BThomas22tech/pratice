@@ -87,4 +87,58 @@ function maxSubarraySum(arr,num){
     }
     return maxSum
 } 
-console.log(maxSubarraySum([2,6,6,4,5,8,6,],3))
+// console.log(maxSubarraySum([2,6,6,4,5,8,6,],3))
+
+function pyramid(){
+
+    for (let line = "#"; line.length < 8; line+= "#"){
+        console.log(line)
+    }
+
+    // for ( var i = 1; i <= num; i++){
+    //     let num = ""
+    // for (var j = 1; j <= i; j++ ){
+    //     num += "# "
+    // }
+    // console.log(num)
+    // }
+}
+pyramid(6)
+
+function chess(num){
+    board = ""
+    for (var i = 0; i < num; i++){
+        if (i % 2 != 0){
+            board += " "
+        }
+        for (var j = 1; j< num-1; j++){
+            if (j % 2 != 0){
+                board+="#"
+            }
+            if (j % 2 === 0){
+                board += " "
+            }
+        }
+        board+="#\n"
+    }
+    return board
+}
+// Alternative way to solvelet size = 8;
+
+// let board = "";
+
+// for (let y = 0; y < size; y++) {
+//   for (let x = 0; x < size; x++) {
+// Sum x and y to check even and odd
+//     if ((x + y) % 2 == 0) {
+//       board += " ";
+//     } else {
+//       board += "#";
+//     }
+//   }
+//   board += "\n";
+// }
+
+// console.log(board);
+
+console.log(chess(8))
